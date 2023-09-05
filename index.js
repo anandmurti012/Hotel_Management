@@ -5,6 +5,7 @@ const express = require('express'),
 	moment = require('moment'),
 	path = require('path'),
 	session = require('express-session'),
+	LocalStrategy = require('passport-local'),
 	flash = require('connect-flash');
 
 // ! initializing packages
