@@ -2,7 +2,6 @@ const mongoose = require('mongoose');
 const reviewSchema = new mongoose.Schema({
 	title: String,
 	body: String,
-	hotel_Id:String,
 	user: {
 		type: mongoose.Schema.Types.ObjectId,
 		ref: 'user'
