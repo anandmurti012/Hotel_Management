@@ -34,6 +34,15 @@ app.use(
 		}
 	})
 );
+//===============================
+// const User = require('./models/user');
+// app.use(passport.initialize());
+// app.use(passport.session());
+// passport.use(new LocalStrategy(User.authenticate()));
+// passport.serializeUser(User.serializeUser());
+// passport.deserializeUser(User.deserializeUser());
+//================================================
+
 
 // ! google auth setup
 const { passportInit } = require('./config/passport');
@@ -60,6 +69,7 @@ const hotelRoutes = require('./routes/hotels'),
 	reviewRoutes = require('./routes/reviews'),
 	authRoutes = require('./routes/auth'),
 	oAuthRoutes = require('./routes/oAuth');
+const passport = require('passport');
 app.use(hotelRoutes);
 app.use(reviewRoutes);
 app.use(authRoutes);

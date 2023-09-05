@@ -1,14 +1,14 @@
 const express = require('express');
 const router = express.Router();
 const passport = require('passport');
+
 router.get('/auth/google', async (req, res, next) => {
 	passport.authenticate('google', {
 		scope: [ 'email', 'profile' ]
 	})(req, res, next);
 });
 router.get(
-	'/auth/google/process',
-	passport.authenticate('google', {
+	'/auth/google/process',passport.authenticate('google', {
 		failureFlash: true,
 		failureRedirect: '/auth/google'
 	}),

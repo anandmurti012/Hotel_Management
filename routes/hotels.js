@@ -6,7 +6,7 @@ const { isLoggedIn, checkHotelAuthor } = require('../middlewares/index');
 // CLOUDINARY
 const multer = require('multer');
 const storage = require('../cloudinary/index');
-const upload = multer({ storage });
+const upload = multer({ storage });  //This storage is a storage of cloudinary.
 // MAPBOX
 const geocoding = require('@mapbox/mapbox-sdk/services/geocoding');
 const geocodingClient = geocoding({ accessToken: process.env.MAPBOX_TOKEN });
